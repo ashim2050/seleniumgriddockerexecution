@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="reportGeneration.ExtentReportListener" />
+    </listeners>
+    <test name="TestOne">
+        <classes>
+            <class name="testcasesFramework.HomePageTest" />
+        </classes>
+    </test>
+    
+    <test name="TestTwo">
+        <classes>
+            <class name="testcasesFramework.AccountDetailsPageTest" />
+        </classes>
+    </test> 
+    
+    
+</suite>
