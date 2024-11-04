@@ -13,4 +13,16 @@ pipeline {
             }
         }
     }
+    stage('Publish Report') {
+    steps {
+        publishHTML(target: [
+            reportDir: 'report', // Directory where reports are located
+            reportFiles: 'extent.html',  // Main report file
+            reportName: 'Extent Report',  // Display name in Jenkins
+            keepAll: true,                // Keep all reports
+            alwaysLinkToLastBuild: true   // Link to the last build
+        ])
+    }
+}
+    
 }
