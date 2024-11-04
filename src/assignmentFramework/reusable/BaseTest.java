@@ -118,16 +118,16 @@ public class BaseTest {
         }
 	}
     
-//    @AfterMethod
-//    public void tearDownMethod() {
-//        System.out.println("Closing browser...");
-//        if (driver != null) {
-//            driver.quit();
-//            System.out.println("Browser closed.");
-//        } else {
-//            System.out.println("Driver was null.");
-//        }
-//    }
+    @AfterMethod
+    public void tearDownMethod() {
+        System.out.println("Closing browser...");
+        if (driver != null) {
+            driver.quit();
+            System.out.println("Browser closed.");
+        } else {
+            System.out.println("Driver was null.");
+        }
+    }
     @AfterSuite
 	public void stopContainer()
 	{
