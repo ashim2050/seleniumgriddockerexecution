@@ -14,18 +14,4 @@ pipeline {
         }
     }
     
-    stage('Archive Reports') {
-        archiveArtifacts artifacts: '**/report/*.html', allowEmptyArchive: true
-    }
-    
-    stage('Publish Report') {
-        publishHTML(target: [
-            reportDir: 'report', // Adjust according to your report directory
-            reportFiles: 'Suite_Results.html',  // Main report file
-            reportName: 'Extent Report',  // Display name in Jenkins
-            keepAll: true,                // Keep all reports
-            alwaysLinkToLastBuild: true   // Link to the last build
-        ])
-    }
-    
 }
